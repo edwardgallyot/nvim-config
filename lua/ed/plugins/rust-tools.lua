@@ -1,41 +1,65 @@
-local rusttools_setup, rusttools = pcall(require, "rust-tools")
+-- copied from simrat39
+-----------------------
+-- Rust
+-----------------------
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
-if not rusttools_setup then
-    return
-end
+local rt = require("rust-tools")
 
-rusttools.setup({
-    server = {
-        on_attach = function(_, bufnr)
-        -- Hover actions
-        vim.keymap.set("n", "<C-space>", rusttools.hover_actions.hover_actions, { buffer = bufnr })
-        -- Code action groups
-        vim.keymap.set("n", "<Leader>a", rusttools.code_action_group.code_action_group, { buffer = bufnr })
+local extension_path = "/home/edgallyot/.vscode-oss/extensions/vadimcn.vscode-lldb-1.8.1-universal/"
+local codelldb_path = extension_path .. "adapter/codelldb"
+local liblldb_path = extension_path .. "lldb/lib/liblldb.so"
+
+rt.setup({
+  tools = {
+    snippet_func = function(edits, bufnr, offset_encoding, old_func)
+    old_func(edits, bufnr, offset_encoding);
+      -- P(edits)
+      -- require("luasnip.extras.lsp").apply_text_edits(
+      --   edits,
+      --   bufnr,
+      --   offset_encoding,
+      --   old_func
+      -- )
     end,
-    },
-    -- inlay hints
+
     inlay_hints = {
-        auto =true,
-        show_parameter_hints = true,
+      auto = true,
+      only_current_line = true,
+      -- whether to show parameter hints with the inlay hints or not
+      -- default: true
+      show_parameter_hints = false,
     },
-    dap = {
-      adapter = {
-        type = "executable",
-        command = "lldb-vscode",
-        name = "rt_lldb",
-      },
-    },
+    on_initialized = function()
+      -- ih.set_all()
+    end,
+  },
+  server = {
+    on_attach = function(client, bufnr)
+      -- ih.on_attach(client, bufnr)
+      vim.keymap.set(
+        "n",
+        "<C-space>",
+        rt.hover_actions.hover_actions,
+        { buffer = bufnr }
+      )
+
+      vim.keymap.set(
+        "n",
+        "<Leader>a",
+        rt.code_action_group.code_action_group,
+        { buffer = bufnr }
+      )
+    end,
+  },
+  dap = {
+    adapter = require("rust-tools.dap").get_codelldb_adapter(
+      codelldb_path,
+      liblldb_path
+    ),
+  },
 })
 
--- copied from simrat39
--- local dap = require("dap")
--- dap.defaults.fallback.terminal_win_cmd = "50vsplit new"
-
--- Inlay Hints
-rusttools.inlay_hints.enable()
-
--- Run rust code
-rusttools.runnables.runnables()
-
--- jump to parent module
-rusttools.parent_module.parent_module()
+local dap = require("dap")
+dap.defaults.fallback.terminal_win_cmd = "50vsplit new"

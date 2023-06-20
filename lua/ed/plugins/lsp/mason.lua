@@ -20,5 +20,6 @@ mason_lspconfig.setup({
     "html",
     "cssls",
     "cmake",
+    "jsonls",
     }
 })

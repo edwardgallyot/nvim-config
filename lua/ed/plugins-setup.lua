@@ -75,4 +75,9 @@ return require('packer').startup(function(use)
     
     -- clangd extensions for C++
     use("p00f/clangd_extensions.nvim")
+
+    -- nvim debug adapter
+    use("mfussenegger/nvim-dap")
+    use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+
 end)

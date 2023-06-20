@@ -1,6 +1,8 @@
 require("ed.core.options")
 require("ed.core.keymaps")
 
+require("ed.plugins.nvim-dap-ui")
+
 require("ed.plugins-setup")
 require("ed.plugins.comment")
 

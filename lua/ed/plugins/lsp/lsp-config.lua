@@ -49,6 +49,11 @@ lspconfig["pylsp"].setup({
     on_attach = on_attach
 })
 
+lspconfig["jsonls"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach
+})
+
 typescript.setup({
     server = {
         capabilities = capabilities,
