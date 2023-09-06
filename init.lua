@@ -23,7 +23,7 @@ require("ed.plugins.gitsigns")
 
 require("ed.plugins.rust-tools")
 
-require("ed.plugins.colourscheme")
+-- require("ed.plugins.colourscheme")
 
 require("ed.plugins.neoscroll")
 
