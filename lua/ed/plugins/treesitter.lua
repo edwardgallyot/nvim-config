@@ -16,6 +16,8 @@ treesitter.setup({
     },
 
     ensure_installed = {
+        "markdown",
+        "markdown_inline",
         "rust",
         "toml",
         "cpp",
