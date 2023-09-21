@@ -7,7 +7,7 @@ capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 local rt = require("rust-tools")
 
-local extension_path = "/home/edgallyot/.vscode-oss/extensions/vadimcn.vscode-lldb-1.8.1-universal/"
+local extension_path = "~/.vscode-oss/extensions/vadimcn.vscode-lldb-1.8.1-universal/"
 local codelldb_path = extension_path .. "adapter/codelldb"
 local liblldb_path = extension_path .. "lldb/lib/liblldb.so"
 

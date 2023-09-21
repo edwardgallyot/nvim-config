@@ -14,6 +14,10 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "<leader>+", "<C-a>");
 keymap.set("n", "<leader>-", "<C-a>");
 
+-- System copy and paste
+keymap.set("n", "<leader>+", "\"*y");
+keymap.set("n", "<leader>+", "\"*p");
+
 -- Split vertically and horizontally
 keymap.set("n", "<leader>v", "<C-w>v");
 keymap.set("n", "<leader>h", "<C-w>s");
