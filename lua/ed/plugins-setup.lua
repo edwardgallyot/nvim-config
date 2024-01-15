@@ -24,7 +24,7 @@ return require('packer').startup(function(use)
    
     -- Dependencies for telescope 
     use{
-        "nvim-telescope/telescope.nvim", tag = '0.1.0',
+        "nvim-telescope/telescope.nvim", tag = '0.1.4',
         requires = { { "nvim-lua/plenary.nvim" } }
     } 
 
@@ -64,8 +64,14 @@ return require('packer').startup(function(use)
     -- git signs
     use("lewis6991/gitsigns.nvim")
 
+    -- co pilot
+    use("github/copilot.vim")
+
     -- rust inlay hints
     use("simrat39/rust-tools.nvim")
+
+    -- inlay hints overall
+    use("lvimuser/lsp-inlayhints.nvim")
 
     -- base 16 colors
     use ("RRethy/nvim-base16")
@@ -82,5 +88,8 @@ return require('packer').startup(function(use)
 
     use("junegunn/goyo.vim")
     use("junegunn/limelight.vim")
+
+    -- linter
+    use('dense-analysis/ale')
 
 end)

@@ -11,6 +11,8 @@ local extension_path = "~/.vscode-oss/extensions/vadimcn.vscode-lldb-1.8.1-unive
 local codelldb_path = extension_path .. "adapter/codelldb"
 local liblldb_path = extension_path .. "lldb/lib/liblldb.so"
 
+vim.g.rust_recommended_style = 0;
+
 rt.setup({
   tools = {
     snippet_func = function(edits, bufnr, offset_encoding, old_func)
@@ -26,10 +28,10 @@ rt.setup({
 
     inlay_hints = {
       auto = true,
-      only_current_line = true,
+      only_current_line = false,
       -- whether to show parameter hints with the inlay hints or not
       -- default: true
-      show_parameter_hints = false,
+      show_parameter_hints = true,
     },
     on_initialized = function()
       -- ih.set_all()

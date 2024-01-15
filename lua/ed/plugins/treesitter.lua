@@ -3,6 +3,11 @@ if not status then
     return
 end
 
+-- For web gpu shader config
+vim.filetype.add({extension = {wgsl = "wgsl"}})
+
+require 'nvim-treesitter.install'.compilers = { 'clang' }
+
 treesitter.setup({
 
     autotags = {
@@ -16,6 +21,7 @@ treesitter.setup({
     },
 
     ensure_installed = {
+        "wgsl",
         "markdown",
         "markdown_inline",
         "rust",

@@ -5,20 +5,20 @@ if not colourscheme_setup then
 end
 
 colourscheme.setup({
-    base00 = '#4a322800', 
-    base01 = '#d05558', 
-    base02 = '#55a393', 
-    base03 = '#d88157',
-    base04 = '#e281c2', 
-    base05 = '#fad259', 
-    base06 = '#059dc2', 
-    base07 = '#fcf9d6',
-    base08 = '#4a322800', 
-    base09 = '#dc8082', 
-    base0A = '#80baee', 
-    base0B = '#e2a181',
-    base0C = '#e796cc', 
-    base0D = '#fbdd83', 
-    base0E = '#44b6d1', 
-    base0F = '#fdfbe0',
+    base00 = '#0D0F14',  -- Background
+    base01 = '#21252b',  -- Darker line highlighting
+    base02 = '#9b9fa5',  -- Selection Background
+    base03 = '#3b71f2',  -- Comments, Invisibles, Line Highlighting Foreground
+    base04 = '#2c313c',  -- Dark Foreground (Used for status bars)
+    base05 = '#9b9fa5',  -- Foreground, Caret, Delimiters, Operators
+    base06 = '#e6e6e6',  -- Light Foreground (Not often used)
+    base07 = '#e6e6e6',  -- Light Background (Not often used)
+    base08 = '#d75f5f',  -- Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+    base09 = '#d1be91',  -- Integers, Boolean, Constants, XML Attributes, Markup Link Url
+    base0A = '#d1be91',  -- Classes, Markup Bold, Search Text Background
+    base0B = '#88b369',  -- Strings, Inherited Class, Markup Code, Diff Inserted
+    base0C = '#2bbac5',  -- Support, Regular Expressions, Escape Characters, Markup Quotes
+    base0D = '#4aa5f0',  -- Functions, Methods, Attribute IDs, Headings
+    base0E = '#be82f0',  -- Keywords, Storage, Selector, Markup Italic, Diff Changed
+    base0F = '#e06c75',  -- Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
 })

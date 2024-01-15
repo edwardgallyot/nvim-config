@@ -5,8 +5,10 @@ if not telescope_setup then
 end
 
 local actions_setup, actions = pcall(require, "telescope.actions")
+
 if not actions_setup then
     return
 end
 
-telescope.setup()
+require('telescope').setup{}
+
