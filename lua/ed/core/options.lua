@@ -12,6 +12,7 @@ opt.autoindent = true
 -- search settings
 opt.ignorecase = true
 opt.smartcase = true
+opt.relativenumber = true
 
 -- backspace
 opt.backspace = "indent,eol,start"
@@ -30,4 +31,11 @@ opt.termguicolors = true
 --opt.background = "dark"
 
 vim.cmd([[highlight link NormalFloat Normal]])
+
+local api = vim.api
+
+api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+    pattern = {"*.c", "*.h"},
+    command = "setlocal shiftwidth=8 tabstop=8 expandtab"
+})
 

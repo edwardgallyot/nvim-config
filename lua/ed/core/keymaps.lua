@@ -18,11 +18,19 @@ keymap.set("n", "<leader>-", "<C-a>");
 keymap.set("n", "<leader>+", "\"*y");
 keymap.set("n", "<leader>+", "\"*p");
 
+-- Paste last yanked
+keymap.set("n", "<leader>p", "\"0p");
+keymap.set("v", "<leader>p", "\"0p");
+keymap.set("c", "<leader>p", "\"0p");
+
 -- Split vertically and horizontally
 keymap.set("n", "<leader>v", "<C-w>v");
 keymap.set("n", "<leader>h", "<C-w>s");
 -- Close split window
 keymap.set("n", "<leader>x", ":close<CR>")
+-- Toggle Relative line numbers
+-- https://stackoverflow.com/questions/70432184/is-there-a-way-to-toggle-the-relative-number-setting-in-visual-mode-and-only-for
+keymap.set("n", "<leader>r", ":setlocal relativenumber!<CR>")
 
 
 
@@ -36,8 +44,9 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
 
 -- telescope
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
-keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
+local builtin = require('telescope.builtin')
+keymap.set('n', '<leader>ff', builtin.find_files, {})
+keymap.set('n', '<leader>fg', builtin.live_grep, {})
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
