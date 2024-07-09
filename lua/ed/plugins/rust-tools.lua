@@ -42,17 +42,33 @@ rt.setup({
       -- ih.on_attach(client, bufnr)
       vim.keymap.set(
         "n",
-        "<C-space>",
+        "<leader>gh",
         rt.hover_actions.hover_actions,
         { buffer = bufnr }
       )
 
       vim.keymap.set(
         "n",
-        "<Leader>a",
+        "<Leader>ca",
         rt.code_action_group.code_action_group,
         { buffer = bufnr }
       )
+        vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+        local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+        local opts = { noremap=true, silent=true }
+
+        -- Key mapping for code actions
+        buf_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+
+        buf_set_keymap('n', '<leader>gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+
+        buf_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+
+        buf_set_keymap('n', '<leader>gf', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+
+        buf_set_keymap('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+
     end,
   },
   dap = {

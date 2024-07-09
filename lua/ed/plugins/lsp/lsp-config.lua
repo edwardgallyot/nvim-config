@@ -25,12 +25,37 @@ local keymap = vim.keymap
 local on_attach = function(client, bufnr)
     vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+    local opts = { noremap=true, silent=true }
+
+    -- Key mapping for code actions
+    buf_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+
+    buf_set_keymap('n', '<leader>gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+
+    buf_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+
+    buf_set_keymap('n', '<leader>gf', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+
+    buf_set_keymap('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+
+    buf_set_keymap('i', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+
+    buf_set_keymap('i', '<leader>gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+
+    buf_set_keymap('i', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+
+    buf_set_keymap('i', '<leader>gf', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+
+    buf_set_keymap('i', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+
+    -- You can add more buffer-specific settings here
 end
 
 if not configs.wgsl_analyzer then
 	configs.wgsl_analyzer = {
 		default_config = {
-                        cmd = { "$HOME/.cargo/bin/wgsl_analyzer" },
+                        cmd = { "/home/edg/.cargo/bin/wgsl_analyzer" },
 			filetypes = { "wgsl" },
 			root_dir = lspconfig.util.root_pattern(".git", "wgsl"),
 			settings = {},
@@ -58,11 +83,11 @@ lspconfig["clangd"].setup({
                 codeActionsInline = false,
             },
             inlayHint = {
-                enable = false,
+                enable = true,
             }
         }
     },
-    on_attach = on_atach
+    on_attach = on_attach
         
 })
 
@@ -83,6 +108,16 @@ lspconfig["pylsp"].setup({
 })
 
 lspconfig["jsonls"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach
+})
+
+lspconfig["zls"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach
+})
+
+lspconfig["glsl_analyzer"].setup({
     capabilities = capabilities,
     on_attach = on_attach
 })

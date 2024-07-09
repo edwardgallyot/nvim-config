@@ -1,5 +1,9 @@
 local opt = vim.opt
 
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 --line numbers
 opt.number = true
 
@@ -34,8 +38,25 @@ vim.cmd([[highlight link NormalFloat Normal]])
 
 local api = vim.api
 
-api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-    pattern = {"*.c", "*.h"},
-    command = "setlocal shiftwidth=8 tabstop=8 expandtab"
+-- for 8 space indents on .c files. meh...
+-- api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+--     pattern = {"*.c", "*.h"},
+--     command = "setlocal shiftwidth=8 tabstop=8 expandtab"
+-- })
+
+api.nvim_create_autocmd("FileType", {
+    pattern = "make",
+    callback = function()
+        vim.bo.expandtab = false
+        vim.bo.shiftwidth = 4
+        vim.bo.tabstop = 4
+    end,
 })
 
+api.nvim_exec([[
+augroup LimelightGoyo
+    autocmd!
+    autocmd User GoyoEnter Limelight
+    autocmd User GoyoLeave Limelight!
+augroup END
+]], false)

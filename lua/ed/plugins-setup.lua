@@ -1,4 +1,13 @@
 return require('packer').startup(function(use)
+
+    -- treee
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+    }
+
     -- Packer can manage itself
     use ("wbthomason/packer.nvim")
 
@@ -84,7 +93,7 @@ return require('packer').startup(function(use)
 
     -- nvim debug adapter
     use("mfussenegger/nvim-dap")
-    use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+    use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
 
     use("junegunn/goyo.vim")
     use("junegunn/limelight.vim")

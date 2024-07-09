@@ -5,20 +5,20 @@ if not colourscheme_setup then
 end
 
 colourscheme.setup({
-    base00 = '#0D0F14',  -- Background
-    base01 = '#21252b',  -- Darker line highlighting
-    base02 = '#9b9fa5',  -- Selection Background
-    base03 = '#3b71f2',  -- Comments, Invisibles, Line Highlighting Foreground
-    base04 = '#2c313c',  -- Dark Foreground (Used for status bars)
-    base05 = '#9b9fa5',  -- Foreground, Caret, Delimiters, Operators
-    base06 = '#e6e6e6',  -- Light Foreground (Not often used)
-    base07 = '#e6e6e6',  -- Light Background (Not often used)
-    base08 = '#d75f5f',  -- Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
-    base09 = '#d1be91',  -- Integers, Boolean, Constants, XML Attributes, Markup Link Url
-    base0A = '#d1be91',  -- Classes, Markup Bold, Search Text Background
-    base0B = '#88b369',  -- Strings, Inherited Class, Markup Code, Diff Inserted
-    base0C = '#2bbac5',  -- Support, Regular Expressions, Escape Characters, Markup Quotes
-    base0D = '#4aa5f0',  -- Functions, Methods, Attribute IDs, Headings
-    base0E = '#be82f0',  -- Keywords, Storage, Selector, Markup Italic, Diff Changed
-    base0F = '#e06c75',  -- Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+    base00 = '#1f2430',  -- Background
+    base01 = '#33415e',  -- Darker line highlighting (Selection Background)
+    base02 = '#33415e',  -- Selection Background
+    base03 = '#6dcbfa',  -- Comments, Invisibles, Line Highlighting Foreground (using Blue)
+    base04 = '#6dcbfa',  -- Dark Foreground (Used for status bars)
+    base05 = '#cbccc6',  -- Foreground, Caret, Delimiters, Operators
+    base06 = '#95e6cb',  -- Light Foreground (Not often used)
+    base07 = '#ffffff',  -- Light Background (Not often used)
+    base08 = '#ed8274',  -- Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+    base09 = '#fad07b',  -- Integers, Boolean, Constants, XML Attributes, Markup Link Url
+    base0A = '#ffd580',  -- Classes, Markup Bold, Search Text Background
+    base0B = '#a6cc70',  -- Strings, Inherited Class, Markup Code, Diff Inserted
+    base0C = '#90e1c6',  -- Support, Regular Expressions, Escape Characters, Markup Quotes
+    base0D = '#6dcbfa',  -- Functions, Methods, Attribute IDs, Headings
+    base0E = '#cfbafa',  -- Keywords, Storage, Selector, Markup Italic, Diff Changed
+    base0F = '#f28779',  -- Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
 })

@@ -7,6 +7,8 @@ require("ed.plugins-setup")
 
 require("ed.plugins.nvim-dap-ui")
 
+require("ed.plugins.tree")
+
 require("ed.plugins.telescope")
 
 require("ed.plugins.comment")
@@ -27,7 +29,7 @@ require("ed.plugins.treesitter")
 
 require("ed.plugins.gitsigns")
 
-require("ed.plugins.rust-tools")
+-- require("ed.plugins.rust-tools")
 
 require("ed.plugins.colourscheme")
 
