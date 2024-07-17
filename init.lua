@@ -37,7 +37,7 @@ require("ed.plugins.gitsigns")
 
 require("ed.plugins.clangd")
 
-require("ed.plugins.cmake")
+-- require("ed.plugins.cmake")
 
 require("ed.plugins.lsp.lspsaga")
 
