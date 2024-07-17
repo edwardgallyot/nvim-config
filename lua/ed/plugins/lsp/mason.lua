@@ -12,16 +12,15 @@ end
 mason.setup()
 
 mason_lspconfig.setup({
-    automatic_installation = true,
     ensure_installed = {
-    "wgsl_analyzer",
-    "rust_analyzer",
-    "tsserver",
-    "pylsp",
-    "html",
-    "cssls",
-    "cmake",
-    "jsonls",
-    "glsl_analyzer",
+        "wgsl_analyzer",
+        "rust_analyzer",
+        "tsserver",
+        "pylsp",
+        "html",
+        "cssls",
+        "cmake",
+        "jsonls",
+        "glsl_analyzer",
     }
 })

@@ -1,11 +1,11 @@
 
 require("ed.core.options")
-require("ed.core.keymaps")
 
+require("ed.core.keymaps")
 
 require("ed.plugins-setup")
 
-require("ed.plugins.nvim-dap-ui")
+-- require("ed.plugins.nvim-dap-ui")
 
 require("ed.plugins.tree")
 
@@ -15,7 +15,7 @@ require("ed.plugins.comment")
 
 require("ed.plugins.inlay")
 
-require("ed.plugins.lualine")
+-- require("ed.plugins.lualine")
 
 require("ed.plugins.nvim-cmp")
 
@@ -31,9 +31,9 @@ require("ed.plugins.gitsigns")
 
 -- require("ed.plugins.rust-tools")
 
-require("ed.plugins.colourscheme")
+-- require("ed.plugins.colourscheme")
 
-require("ed.plugins.neoscroll")
+-- require("ed.plugins.neoscroll")
 
 require("ed.plugins.clangd")
 
