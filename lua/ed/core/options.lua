@@ -39,10 +39,10 @@ vim.cmd([[highlight link NormalFloat Normal]])
 local api = vim.api
 
 -- for 8 space indents on .c files. meh...
--- api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
---     pattern = {"*.c", "*.h"},
---     command = "setlocal shiftwidth=8 tabstop=8 expandtab"
--- })
+api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+    pattern = {"*.c", "*.h"},
+    command = "setlocal shiftwidth=8 tabstop=8 expandtab"
+})
 
 api.nvim_create_autocmd("FileType", {
     pattern = "make",
