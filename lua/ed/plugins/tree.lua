@@ -2,6 +2,8 @@
 -- empty setup using defaults
 require("nvim-tree").setup()
 
+require("nvim-web-devicons").setup()
+
 -- OR setup with some options
 require("nvim-tree").setup({
   sort = {

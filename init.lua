@@ -41,4 +41,4 @@ require("ed.plugins.clangd")
 
 require("ed.plugins.lsp.lspsaga")
 
-require("ed.plugins.linter")
+-- require("ed.plugins.linter")

@@ -83,7 +83,7 @@ lspconfig["clangd"].setup({
                 codeActionsInline = false,
             },
             inlayHint = {
-                enable = true,
+                enable = false,
             }
         }
     },

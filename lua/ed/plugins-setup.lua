@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     } 
+
     --icons
     use("kyazdani42/nvim-web-devicons")
    
@@ -43,7 +44,7 @@ return require('packer').startup(function(use)
     use("hrsh7th/cmp-path")
 
     -- cmake tools
-    use("Civitasv/cmake-tools.nvim")
+    -- use("Civitasv/cmake-tools.nvim")
 
     -- typescript server additions
     use("jose-elias-alvarez/typescript.nvim")
@@ -74,10 +75,10 @@ return require('packer').startup(function(use)
     use("lewis6991/gitsigns.nvim")
 
     -- co pilot
-    use("github/copilot.vim")
+    -- use("github/copilot.vim")
 
     -- rust inlay hints
-    use("simrat39/rust-tools.nvim")
+    -- use("simrat39/rust-tools.nvim")
 
     -- inlay hints overall
     use("lvimuser/lsp-inlayhints.nvim")
@@ -85,18 +86,18 @@ return require('packer').startup(function(use)
     -- base 16 colors
     use ("RRethy/nvim-base16")
 
-    -- smooth scrolling, not sure this works lol
-    use("karb94/neoscroll.nvim")
+    -- -- smooth scrolling, not sure this works lol
+    -- use("karb94/neoscroll.nvim")
     
     -- clangd extensions for C++
     use("p00f/clangd_extensions.nvim")
 
-    -- nvim debug adapter
-    use("mfussenegger/nvim-dap")
-    use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
+    -- -- nvim debug adapter
+    -- use("mfussenegger/nvim-dap")
+    -- use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
 
-    use("junegunn/goyo.vim")
-    use("junegunn/limelight.vim")
+    -- use("junegunn/goyo.vim")
+    -- use("junegunn/limelight.vim")
 
     -- linter
     use('dense-analysis/ale')

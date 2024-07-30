@@ -19,6 +19,10 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "<leader>+", "<C-a>");
 keymap.set("n", "<leader>-", "<C-a>");
 
+-- Build
+keymap.set('n', '<leader>rb', ":!rebuild\n")
+keymap.set('n', '<leader>b',  ":!build\n")
+
 -- System copy and paste
 keymap.set("n", "<leader>+", "\"*y");
 keymap.set("n", "<leader>+", "\"*p");
@@ -57,39 +61,39 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 
 -- rust commands
-keymap.set("n", "<leader>rr", "<cmd>RustRunnables<cr>")
-keymap.set("n", "<leader>rd", "<cmd>RustDebug<cr>")
-keymap.set("n", "<leader>ss", "<cmd>mksession! ~/dev/vim_sessions/sesh.vim<cr>");
-keymap.set("n", "<leader>ll", "<cmd>source ~/dev/vim_sessions/sesh.vim<cr>");
-keymap.set("n", "<leader>pp", "<cmd>RustParentModule<cr>")
+-- keymap.set("n", "<leader>rr", "<cmd>RustRunnables<cr>")
+-- keymap.set("n", "<leader>rd", "<cmd>RustDebug<cr>")
+-- keymap.set("n", "<leader>ss", "<cmd>mksession! ~/dev/vim_sessions/sesh.vim<cr>");
+-- keymap.set("n", "<leader>ll", "<cmd>source ~/dev/vim_sessions/sesh.vim<cr>");
+-- keymap.set("n", "<leader>pp", "<cmd>RustParentModule<cr>")
 
 -- goyo command
-keymap.set("n", "<leader>gy", "<cmd>Goyo<cr>")
+-- keymap.set("n", "<leader>gy", "<cmd>Goyo<cr>")
 
 
 -- recommended nvim dap commands
-keymap.set('n', '<F5>', function() require('dap').continue() end)
-keymap.set('n', '<F10>', function() require('dap').step_over() end)
-keymap.set('n', '<F11>', function() require('dap').step_into() end)
-keymap.set('n', '<F12>', function() require('dap').step_out() end)
-keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end)
-keymap.set('n', '<Leader>B', function() require('dap').set_breakpoint() end)
-keymap.set('n', '<Leader>lp', function() require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
-keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end)
-keymap.set('n', '<Leader>dl', function() require('dap').run_last() end)
-keymap.set({'n', 'v'}, '<Leader>dh', function()
-
-  require('dap.ui.widgets').hover()
-end)
-vim.keymap.set({'n', 'v'}, '<Leader>dp', function()
-  require('dap.ui.widgets').preview()
-end)
-vim.keymap.set('n', '<Leader>df', function()
-  local widgets = require('dap.ui.widgets')
-  widgets.centered_float(widgets.frames)
-end)
-vim.keymap.set('n', '<Leader>ds', function()
-  local widgets = require('dap.ui.widgets')
-  widgets.centered_float(widgets.scopes)
-end)
-
+-- keymap.set('n', '<F5>', function() require('dap').continue() end)
+-- keymap.set('n', '<F10>', function() require('dap').step_over() end)
+-- keymap.set('n', '<F11>', function() require('dap').step_into() end)
+-- keymap.set('n', '<F12>', function() require('dap').step_out() end)
+-- keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end)
+-- keymap.set('n', '<Leader>B', function() require('dap').set_breakpoint() end)
+-- keymap.set('n', '<Leader>lp', function() require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
+-- keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end)
+-- keymap.set('n', '<Leader>dl', function() require('dap').run_last() end)
+-- keymap.set({'n', 'v'}, '<Leader>dh', function()
+--
+--   require('dap.ui.widgets').hover()
+-- end)
+-- vim.keymap.set({'n', 'v'}, '<Leader>dp', function()
+--   require('dap.ui.widgets').preview()
+-- end)
+-- vim.keymap.set('n', '<Leader>df', function()
+--   local widgets = require('dap.ui.widgets')
+--   widgets.centered_float(widgets.frames)
+-- end)
+-- vim.keymap.set('n', '<Leader>ds', function()
+--   local widgets = require('dap.ui.widgets')
+--   widgets.centered_float(widgets.scopes)
+-- end)
+--
