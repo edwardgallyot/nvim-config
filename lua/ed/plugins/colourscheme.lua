@@ -23,21 +23,44 @@ colourscheme.setup({
     base0F = '#f28779',  -- Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
 })
 
+-- Rose Wine
 colourscheme.setup({
-    base00 = '#191724',  -- Background
-    base01 = '#1f1d2e',  -- Darker line highlighting (Selection Background)
-    base02 = '#26233a',  -- Selection Background
-    base03 = '#8f8cae',  -- Comments, Invisibles, Line Highlighting Foreground (Brighter)
-    base04 = '#b0accf',  -- Dark Foreground (Used for status bars, Brighter)
-    base05 = '#ffffff',  -- Foreground, Caret, Delimiters, Operators (Brighter)
-    base06 = '#ffffff',  -- Light Foreground (Not often used, Brighter)
-    base07 = '#6c6783',  -- Light Background (Not often used)
-    base08 = '#eb6f92',  -- Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
-    base09 = '#f6c177',  -- Integers, Boolean, Constants, XML Attributes, Markup Link Url
-    base0A = '#ebbcba',  -- Classes, Markup Bold, Search Text Background
-    base0B = '#31748f',  -- Strings, Inherited Class, Markup Code, Diff Inserted
-    base0C = '#9ccfd8',  -- Support, Regular Expressions, Escape Characters, Markup Quotes
-    base0D = '#c4a7e7',  -- Functions, Methods, Attribute IDs, Headings
-    base0E = '#f6c177',  -- Keywords, Storage, Selector, Markup Italic, Diff Changed
-    base0F = '#524f67',  -- Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+    base00 = '#191724',  
+    base01 = '#1f1d2e',  
+    base02 = '#26233a',  
+    base03 = '#8f8cae',  
+    base04 = '#b0accf',  
+    base05 = '#ffffff',  
+    base06 = '#ffffff',  
+    base07 = '#6c6783',  
+    base08 = '#eb6f92',  
+    base09 = '#f6c177',  
+    base0A = '#ebbcba',  
+    base0B = '#31748f',  
+    base0C = '#9ccfd8',  
+    base0D = '#c4a7e7',  
+    base0E = '#f6c177',  
+    base0F = '#524f67',  
 })
+
+
+-- Gruv Box
+colourscheme.setup({
+    base00 = '#282828',  
+    base01 = '#3c3836',  
+    base02 = '#504945',  
+    base03 = '#665c54',  
+    base04 = '#bdae93',  
+    base05 = '#d5c4a1',  
+    base06 = '#ebdbb2',  
+    base07 = '#fbf1c7',  
+    base08 = '#fb4934',  
+    base09 = '#fe8019',  
+    base0A = '#fabd2f',  
+    base0B = '#b8bb26',  
+    base0C = '#83a598',  
+    base0D = '#8ec07c',  
+    base0E = '#d3869b',  
+    base0F = '#d65d0e',  
+})
+
