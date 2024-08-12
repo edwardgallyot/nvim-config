@@ -12,6 +12,11 @@ keymap.set("v", "jk", "<ESC>")
 keymap.set("i", "jk", "<ESC>")
 keymap.set("c", "jk", "<ESC>")
 
+keymap.set("n", "<C-H>", "<C-W>h")
+keymap.set("n", "<C-L>", "<C-W>l")
+keymap.set("n", "<C-K>", "<C-W>k")
+keymap.set("n", "<C-J>", "<C-W>j")
+
 -- Clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 

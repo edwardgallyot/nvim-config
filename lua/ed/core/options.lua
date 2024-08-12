@@ -35,7 +35,7 @@ opt.termguicolors = true
 --opt.background = "dark"
 
 vim.cmd([[highlight link NormalFloat Normal]])
-vim.diagnostic.disable()
+-- vim.diagnostic.disable()
 
 local api = vim.api
 

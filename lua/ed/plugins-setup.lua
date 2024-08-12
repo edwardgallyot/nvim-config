@@ -32,9 +32,9 @@ return require('packer').startup(function(use)
     } 
 
     -- auto completion
-    -- use("hrsh7th/nvim-cmp")
-    -- use("hrsh7th/cmp-buffer")
-    -- use("hrsh7th/cmp-path")
+    use("hrsh7th/nvim-cmp")
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/cmp-path")
 
     -- cmake tools
     -- use("Civitasv/cmake-tools.nvim")
@@ -46,17 +46,17 @@ return require('packer').startup(function(use)
     -- use("onsails/lspkind.nvim")
 
     -- snippets
-    -- use("rafamadriz/friendly-snippets")
-    -- use("L3MON4D3/LuaSnip")
-    -- use("saadparwaiz1/cmp_luasnip")
+    use("rafamadriz/friendly-snippets")
+    use("L3MON4D3/LuaSnip")
+    use("saadparwaiz1/cmp_luasnip")
 
     -- lsp manager
-    -- use("williamboman/mason.nvim")
-    -- use("williamboman/mason-lspconfig.nvim")
-
+    use("williamboman/mason.nvim")
+    use("williamboman/mason-lspconfig.nvim")
+    
     -- configure lsp servers
-    -- use("neovim/nvim-lspconfig")
-    -- use("hrsh7th/cmp-nvim-lsp")
+    use("neovim/nvim-lspconfig")
+    use("hrsh7th/cmp-nvim-lsp")
 
     -- nvim-treesitter
     use("nvim-treesitter/nvim-treesitter")
@@ -74,7 +74,7 @@ return require('packer').startup(function(use)
     -- use("simrat39/rust-tools.nvim")
 
     -- inlay hints overall
-    -- use("lvimuser/lsp-inlayhints.nvim")
+    use("lvimuser/lsp-inlayhints.nvim")
 
     -- base 16 colors
     use ("RRethy/nvim-base16")
@@ -83,7 +83,7 @@ return require('packer').startup(function(use)
     -- use("karb94/neoscroll.nvim")
     
     -- clangd extensions for C++
-    -- use("p00f/clangd_extensions.nvim")
+    use("p00f/clangd_extensions.nvim")
 
     -- -- nvim debug adapter
     -- use("mfussenegger/nvim-dap")

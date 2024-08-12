@@ -84,10 +84,10 @@ _G.packer_plugins = {
     path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ale = {
+  ["clangd_extensions.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\ale",
-    url = "https://github.com/dense-analysis/ale"
+    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\clangd_extensions.nvim",
+    url = "https://github.com/p00f/clangd_extensions.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -123,16 +123,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lsp-inlayhints.nvim",
     url = "https://github.com/lvimuser/lsp-inlayhints.nvim"
-  },
-  ["lspkind.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspkind.nvim",
-    url = "https://github.com/onsails/lspkind.nvim"
-  },
-  ["lualine.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -193,26 +183,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["typescript.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\typescript.nvim",
-    url = "https://github.com/jose-elias-alvarez/typescript.nvim"
-  },
-  ["vim-maximizer"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-maximizer",
-    url = "https://github.com/szw/vim-maximizer"
-  },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-surround",
-    url = "https://github.com/tpope/vim-surround"
-  },
-  ["vim-tmux-navigator"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-tmux-navigator",
-    url = "https://github.com/christoomey/vim-tmux-navigator"
   }
 }
 
