@@ -13,15 +13,15 @@ require("ed.plugins.telescope")
 
 require("ed.plugins.comment")
 
-require("ed.plugins.inlay")
+-- require("ed.plugins.inlay")
 
 -- require("ed.plugins.lualine")
 
-require("ed.plugins.nvim-cmp")
+-- require("ed.plugins.nvim-cmp")
 
-require("ed.plugins.lsp.mason")
-
-require("ed.plugins.lsp.lsp-config")
+-- require("ed.plugins.lsp.mason")
+--
+-- require("ed.plugins.lsp.lsp-config")
 
 require("ed.plugins.autopairs")
 
@@ -35,10 +35,10 @@ require("ed.plugins.colourscheme")
 
 -- require("ed.plugins.neoscroll")
 
-require("ed.plugins.clangd")
+-- require("ed.plugins.clangd")
 
 -- require("ed.plugins.cmake")
 
-require("ed.plugins.lsp.lspsaga")
+-- require("ed.plugins.lsp.lspsaga")
 
 -- require("ed.plugins.linter")

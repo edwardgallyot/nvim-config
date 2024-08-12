@@ -76,20 +76,20 @@ lspconfig["wgsl_analyzer"].setup({
     on_attach = on_attach
 })
 
-lspconfig["clangd"].setup({
-    capabilities = {
-        textDocument = {
-            publishDiagnostics = {
-                codeActionsInline = false,
-            },
-            inlayHint = {
-                enable = false,
-            }
-        }
-    },
-    on_attach = on_attach
-        
-})
+-- lspconfig["clangd"].setup({
+--     capabilities = {
+--         textDocument = {
+--             publishDiagnostics = {
+--                 codeActionsInline = false,
+--             },
+--             inlayHint = {
+--                 enable = false,
+--             }
+--         }
+--     },
+--     on_attach = on_attach
+--         
+-- })
 
 lspconfig["bashls"].setup({
     capabilities = capabilities,

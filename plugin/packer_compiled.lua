@@ -89,16 +89,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\ale",
     url = "https://github.com/dense-analysis/ale"
   },
-  ["clangd_extensions.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\clangd_extensions.nvim",
-    url = "https://github.com/p00f/clangd_extensions.nvim"
-  },
-  ["cmake-tools.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmake-tools.nvim",
-    url = "https://github.com/Civitasv/cmake-tools.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
@@ -119,11 +109,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
@@ -133,16 +118,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
-  ["goyo.vim"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\goyo.vim",
-    url = "https://github.com/junegunn/goyo.vim"
-  },
-  ["limelight.vim"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\limelight.vim",
-    url = "https://github.com/junegunn/limelight.vim"
   },
   ["lsp-inlayhints.nvim"] = {
     loaded = true,
@@ -169,11 +144,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["neoscroll.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neoscroll.nvim",
-    url = "https://github.com/karb94/neoscroll.nvim"
-  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-autopairs",
@@ -189,25 +159,10 @@ _G.packer_plugins = {
     path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
-  ["nvim-dap-ui"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-dap-ui",
-    url = "https://github.com/rcarriga/nvim-dap-ui"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-nio"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-nio",
-    url = "https://github.com/nvim-neotest/nvim-nio"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -233,11 +188,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["rust-tools.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\edgal\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rust-tools.nvim",
-    url = "https://github.com/simrat39/rust-tools.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
