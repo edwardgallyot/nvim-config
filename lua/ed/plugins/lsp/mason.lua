@@ -19,6 +19,8 @@ mason_lspconfig.setup({
         "pylsp",
         "html",
         "cssls",
+        "clangd",
+        "lua_ls",
         "cmake",
         "jsonls",
         "glsl_analyzer",
