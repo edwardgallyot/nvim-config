@@ -61,4 +61,7 @@ return require('packer').startup(function(use)
     -- clangd extensions for C++
     use("p00f/clangd_extensions.nvim")
 
+    -- undo tree
+    use("mbbill/undotree")
+
 end)
