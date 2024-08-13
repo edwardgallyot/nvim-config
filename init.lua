@@ -5,17 +5,13 @@ require("ed.core.keymaps")
 
 require("ed.plugins-setup")
 
--- require("ed.plugins.nvim-dap-ui")
-
 require("ed.plugins.tree")
 
 require("ed.plugins.telescope")
 
 require("ed.plugins.comment")
 
--- require("ed.plugins.inlay")
-
--- require("ed.plugins.lualine")
+require("ed.plugins.inlay")
 
 require("ed.plugins.nvim-cmp")
 
@@ -29,16 +25,7 @@ require("ed.plugins.treesitter")
 
 require("ed.plugins.gitsigns")
 
--- require("ed.plugins.rust-tools")
-
 require("ed.plugins.colourscheme")
-
--- require("ed.plugins.neoscroll")
 
 require("ed.plugins.clangd")
 
--- require("ed.plugins.cmake")
-
--- require("ed.plugins.lsp.lspsaga")
-
--- require("ed.plugins.linter")
