@@ -32,10 +32,8 @@ opt.iskeyword:append("-")
 
 -- colors
 opt.termguicolors = true
---opt.background = "dark"
 
 vim.cmd([[highlight link NormalFloat Normal]])
--- vim.diagnostic.disable()
 
 local api = vim.api
 
@@ -45,19 +43,3 @@ api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
     command = "setlocal shiftwidth=8 tabstop=8 expandtab"
 })
 
-api.nvim_create_autocmd("FileType", {
-    pattern = "make",
-    callback = function()
-        vim.bo.expandtab = false
-        vim.bo.shiftwidth = 4
-        vim.bo.tabstop = 4
-    end,
-})
-
-api.nvim_exec([[
-augroup LimelightGoyo
-    autocmd!
-    autocmd User GoyoEnter Limelight
-    autocmd User GoyoLeave Limelight!
-augroup END
-]], false)
