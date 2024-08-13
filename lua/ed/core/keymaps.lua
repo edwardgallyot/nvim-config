@@ -2,8 +2,6 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-local cmd = vim.cmd
-
 -- Exit using j and k  
 keymap.set("i", "jk", "<ESC>")
 keymap.set("v", "jk", "<ESC>")

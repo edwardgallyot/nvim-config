@@ -12,18 +12,23 @@ end
 
 local keymap = vim.keymap
 
-    keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-    keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-
 
 -- enable keybinds for available lsp server
 local on_attach = function(client, bufnr)
-    vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
-    vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local opts = { noremap=true, silent=true }
 
     -- Key mapping for code actions
+    buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+
+    buf_set_keymap('n', '<leader>gd', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+
+    buf_set_keymap('n', '<F12>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+
+    buf_set_keymap('n', '<S-F12>', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+
+    buf_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+
     buf_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 
     buf_set_keymap('n', '<leader>gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
