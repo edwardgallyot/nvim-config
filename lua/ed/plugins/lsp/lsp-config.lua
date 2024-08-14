@@ -123,6 +123,13 @@ lspconfig["glsl_analyzer"].setup({
 })
 
 lspconfig["lua_ls"].setup({
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = {'vim'}
+            }
+        }
+    },
     capabilities = capabilities,
     on_attach = on_attach
 })
