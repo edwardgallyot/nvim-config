@@ -27,6 +27,9 @@ keymap.set("n", "<leader>-", "<C-a>");
 keymap.set('n', '<leader>rb', ":!rebuild\n")
 keymap.set('n', '<leader>b',  ":!build\n")
 
+-- Text wrap
+keymap.set('n', '<leader>w', ":set nowrap!")
+
 -- System copy and paste
 keymap.set("n", "<leader>+", "\"*y");
 keymap.set("n", "<leader>+", "\"*p");
