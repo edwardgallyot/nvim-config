@@ -43,3 +43,14 @@ api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
     command = "setlocal shiftwidth=8 tabstop=8 expandtab"
 })
 
+-- Define a highlight group with your preferred style
+vim.api.nvim_set_hl(0, 'ImportantWord', { fg = 'Yellow', bold = true, underline = true})
+
+-- Create an autocmd to match and highlight the word "IMPORTANT"
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+    pattern = "*",
+    callback = function()
+        vim.fn.matchadd('ImportantWord', '\\<IMPORTANT\\>')
+    end
+})
+

@@ -1,7 +1,6 @@
+require("ed.core.keymaps")
 
 require("ed.core.options")
-
-require("ed.core.keymaps")
 
 require("ed.plugins-setup")
 
@@ -30,4 +29,3 @@ require("ed.plugins.colourscheme")
 require("ed.plugins.clangd")
 
 require("ed.plugins.undotree")
-

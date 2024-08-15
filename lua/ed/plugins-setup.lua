@@ -15,12 +15,12 @@ return require('packer').startup(function(use)
 
     --icons
     use("kyazdani42/nvim-web-devicons")
-   
+    
     -- Dependencies for telescope 
     use{
         "nvim-telescope/telescope.nvim", tag = '0.1.4',
         requires = { { "nvim-lua/plenary.nvim" } }
-    } 
+    }
 
     -- auto completion
     use("hrsh7th/nvim-cmp")
