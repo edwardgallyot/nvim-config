@@ -34,6 +34,7 @@ opt.iskeyword:append("-")
 opt.termguicolors = true
 
 vim.cmd([[highlight link NormalFloat Normal]])
+vim.cmd([[set nowrap]])
 
 local api = vim.api
 
