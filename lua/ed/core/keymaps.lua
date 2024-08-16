@@ -48,6 +48,8 @@ keymap.set("n", "<leader>x", ":close<CR>")
 -- https://stackoverflow.com/questions/70432184/is-there-a-way-to-toggle-the-relative-number-setting-in-visual-mode-and-only-for
 keymap.set("n", "<leader>r", ":setlocal relativenumber!<CR>")
 
+keymap.set("n", "<leader>T", ":terminal <CR>")
+
 -- telescope
 local builtin = require('telescope.builtin')
 keymap.set('n', '<leader>ff', builtin.find_files, {})
