@@ -7,6 +7,7 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("v", "jk", "<ESC>")
 keymap.set("i", "jk", "<ESC>")
 keymap.set("c", "jk", "<ESC>")
+keymap.set("t", "jk", "<C-\\><C-n>")
 
 -- Navigate around the screen
 keymap.set("n", "<C-H>", "<C-W>h")
@@ -51,7 +52,17 @@ keymap.set("n", "<leader>x", ":close<CR>")
 -- https://stackoverflow.com/questions/70432184/is-there-a-way-to-toggle-the-relative-number-setting-in-visual-mode-and-only-for
 keymap.set("n", "<leader>r", ":setlocal relativenumber!<CR>")
 
-keymap.set("n", "<leader>T", ":terminal <CR>")
+
+local function term()
+    vim.cmd([[
+        terminal
+        setlocal norelativenumber!
+        setlocal nonumber!
+    ]])
+end
+keymap.set("n", "<leader>ln", ":setlocal norelativenumber! nonumber! <CR>")
+
+keymap.set("n", "<leader>T", term)
 
 -- telescope
 local builtin = require('telescope.builtin')
