@@ -52,6 +52,8 @@ keymap.set("n", "<leader>x", ":close<CR>")
 -- https://stackoverflow.com/questions/70432184/is-there-a-way-to-toggle-the-relative-number-setting-in-visual-mode-and-only-for
 keymap.set("n", "<leader>r", ":setlocal relativenumber!<CR>")
 
+keymap.set("n", ":W<CR>", ":SudaWrite<CR>")
+
 
 local function term()
     vim.cmd([[
