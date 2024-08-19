@@ -5,7 +5,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- automatic sudo 
-vim.g.suda_smart_edit = 1
+-- vim.g.suda_smart_edit = 1
 
 --line numbers
 opt.number = true
