@@ -22,6 +22,9 @@ return require('packer').startup(function(use)
         requires = { { "nvim-lua/plenary.nvim" } }
     }
 
+    -- sudo stuff
+    use("lambdalisue/vim-suda")
+
     -- auto completion
     use("hrsh7th/nvim-cmp")
     use("hrsh7th/cmp-buffer")
