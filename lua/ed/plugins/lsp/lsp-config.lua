@@ -88,12 +88,17 @@ lspconfig["clangd"].setup({
         }
     },
     on_attach = on_attach
-        
 })
 
 lspconfig["bashls"].setup({
     capabilities = capabilities,
     on_attach = on_attach
+})
+
+lspconfig["nginx_language_server"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach
+
 })
 
 lspconfig["cmake"].setup({

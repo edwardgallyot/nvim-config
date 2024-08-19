@@ -15,7 +15,6 @@ mason_lspconfig.setup({
     ensure_installed = {
         "wgsl_analyzer",
         "rust_analyzer",
-        "tsserver",
         "pylsp",
         "html",
         "cssls",
@@ -24,5 +23,8 @@ mason_lspconfig.setup({
         "cmake",
         "jsonls",
         "glsl_analyzer",
+        "bash_ls",
+        "bash_ls",
+        "nginx_language_server",
     }
 })
