@@ -23,8 +23,29 @@ keymap.set("n", "<leader>+", "<C-a>");
 keymap.set("n", "<leader>-", "<C-a>");
 
 -- Build
-keymap.set('n', '<leader>rb', ":!rebuild\n")
-keymap.set('n', '<leader>b',  ":!build\n")
+-- Define your key mappings for different filetypes
+local function c_build_keys()
+  vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':!build<CR>', { noremap = true, silent = true })
+  vim.api.nvim_buf_set_keymap(0, 'n', '<leader>rb', ':!rebuild<CR>', { noremap = true, silent = true })
+end
+
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = {"*.c", "*.h"},
+  callback = c_build_keys
+})
+
+local function zig_build_keys()
+  vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':!zig build<CR>', { noremap = true, silent = true })
+end
+
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = {"*.zig"},
+  callback = zig_build_keys
+})
+
+
+-- keymap.set('n', '<leader>rb', ":!rebuild\n")
+-- keymap.set('n', '<leader>b',  ":!build\n")
 
 -- Text wrap
 keymap.set('n', '<leader>w', ":set nowrap!\n")
