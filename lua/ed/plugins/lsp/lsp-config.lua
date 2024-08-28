@@ -127,6 +127,11 @@ lspconfig["glsl_analyzer"].setup({
     on_attach = on_attach
 })
 
+lspconfig["hls"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach
+})
+
 lspconfig["lua_ls"].setup({
     settings = {
         Lua = {

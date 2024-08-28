@@ -29,3 +29,5 @@ require("ed.plugins.colourscheme")
 require("ed.plugins.clangd")
 
 require("ed.plugins.undotree")
+
+require("ed.core.neovide")

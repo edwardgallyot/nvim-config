@@ -23,7 +23,8 @@ mason_lspconfig.setup({
         "cmake",
         "jsonls",
         "glsl_analyzer",
-        "bashls"
+        "bashls",
+        "hls",
         -- "nginx_language_server"
     }
 })
