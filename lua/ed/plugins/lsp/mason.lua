@@ -24,7 +24,7 @@ mason_lspconfig.setup({
         "jsonls",
         "glsl_analyzer",
         "bashls",
-        "hls",
+        -- "hls",
         -- "nginx_language_server"
     }
 })
