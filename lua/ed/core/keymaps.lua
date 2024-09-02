@@ -30,7 +30,7 @@ local function c_build_keys()
 end
 
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-  pattern = {"*.c", "*.h"},
+  pattern = {"*.bat", "*.asm", "*.c", "*.h"},
   callback = c_build_keys
 })
 
