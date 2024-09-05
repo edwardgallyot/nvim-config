@@ -10,5 +10,13 @@ if not actions_setup then
     return
 end
 
-require('telescope').setup{}
+require('telescope').setup{
+  pickers = {
+    find_files = {
+      hidden = true,
+      ignore_vcs = true,
+    }
+  }
+
+}
 
