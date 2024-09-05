@@ -3,7 +3,6 @@ require("nvim-tree").setup()
 
 require("nvim-web-devicons").setup()
 
--- OR setup with some options
 require("nvim-tree").setup({
   sort = {
     sorter = "case_sensitive",
@@ -15,6 +14,11 @@ require("nvim-tree").setup({
     group_empty = true,
   },
   filters = {
-    dotfiles = true,
+    dotfiles = false,
   },
+  git = {
+    enable = true,
+    ignore = false,
+    timeout = 500,
+  }
 })
