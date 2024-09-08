@@ -1,8 +1,10 @@
+vim.g.mapleader = " "
+
+require("ed.plugins-setup")
+
 require("ed.core.keymaps")
 
 require("ed.core.options")
-
-require("ed.plugins-setup")
 
 require("ed.plugins.tree")
 

@@ -1,70 +1,95 @@
-return require('packer').startup(function(use)
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
+end
+vim.opt.rtp:prepend(lazypath)
 
-    -- treee
-    use {
+-- Make sure to setup `mapleader` and `maplocalleader` before
+-- loading lazy.nvim so that mappings are correct.
+-- This is also a good place to setup other settings (vim.opt)
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+-- Setup lazy.nvim
+require("lazy").setup({
+  spec = {
+    {
         'nvim-tree/nvim-tree.lua',
-        requires = {
+        dependencies = {
             'nvim-tree/nvim-web-devicons', -- optional
         },
-    }
+    },
     -- Packer can manage itself
-    use ("wbthomason/packer.nvim")
+    "wbthomason/packer.nvim",
 
     -- commenting 
-    use("numToStr/Comment.nvim")
+    "numToStr/Comment.nvim",
 
     --icons
-    use("kyazdani42/nvim-web-devicons")
-    
+    "kyazdani42/nvim-web-devicons",
     -- Dependencies for telescope 
-    use{
+    {
         "nvim-telescope/telescope.nvim", tag = '0.1.4',
-        requires = { { "nvim-lua/plenary.nvim" } }
-    }
+        dependencies = { "nvim-lua/plenary.nvim", }
+    },
 
     -- sudo stuff
-    use("lambdalisue/vim-suda")
+    "lambdalisue/vim-suda",
 
     -- auto completion
-    use("hrsh7th/nvim-cmp")
-    use("hrsh7th/cmp-buffer")
-    use("hrsh7th/cmp-path")
+    "hrsh7th/nvim-cmp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
 
     -- lsp icons
-    use("onsails/lspkind.nvim")
+    "onsails/lspkind.nvim",
 
     -- snippets
-    use("rafamadriz/friendly-snippets")
-    use("L3MON4D3/LuaSnip")
-    use("saadparwaiz1/cmp_luasnip")
+    "rafamadriz/friendly-snippets",
+    "L3MON4D3/LuaSnip",
+    "saadparwaiz1/cmp_luasnip",
 
     -- lsp manager
-    use("williamboman/mason.nvim")
-    use("williamboman/mason-lspconfig.nvim")
-    
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
     -- configure lsp servers
-    use("neovim/nvim-lspconfig")
-    use("hrsh7th/cmp-nvim-lsp")
+    "neovim/nvim-lspconfig",
+    "hrsh7th/cmp-nvim-lsp",
 
     -- nvim-treesitter
-    use("nvim-treesitter/nvim-treesitter")
+    "nvim-treesitter/nvim-treesitter",
 
     -- auto closing
-    use("windwp/nvim-autopairs")
+    "windwp/nvim-autopairs",
 
     -- git signs
-    use("lewis6991/gitsigns.nvim")
+    "lewis6991/gitsigns.nvim",
 
     -- inlay hints overall
-    use("lvimuser/lsp-inlayhints.nvim")
+    "lvimuser/lsp-inlayhints.nvim",
 
     -- base 16 colors
-    use ("RRethy/nvim-base16")
-    
+    "RRethy/nvim-base16",
     -- clangd extensions for C++
-    use("p00f/clangd_extensions.nvim")
+    "p00f/clangd_extensions.nvim",
 
     -- undo tree
-    use("mbbill/undotree")
-
-end)
+    "mbbill/undotree",
+  },
+  -- Configure any other settings here. See the documentation for more details.
+  -- colorscheme that will be used when installing plugins.
+  install = {  },
+  -- automatically check for plugin updates
+  checker = { enabled = true },
+})
