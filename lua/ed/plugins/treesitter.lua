@@ -32,12 +32,14 @@ treesitter.setup({
         "python",
         "toml",
         "bash",
+        "swift",
+        "comment",
     },
     auto_install = true,
     rainbow = {
-    enable = true,
-    extended_mode = true,
-    max_file_lines = nil,
-  },
+      enable = true,
+      extended_mode = true,
+      max_file_lines = nil,
+    },
 
 })
