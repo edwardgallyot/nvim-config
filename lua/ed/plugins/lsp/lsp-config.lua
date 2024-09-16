@@ -3,6 +3,7 @@ if not lspconfig_status then
     return
 end
 
+
 local configs = require("lspconfig.configs")
 
 local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
@@ -12,6 +13,7 @@ end
 
 local keymap = vim.keymap
 
+lspconfig.sourcekit.setup{}
 
 -- enable keybinds for available lsp server
 local on_attach = function(client, bufnr)
