@@ -13,7 +13,9 @@ end
 
 local keymap = vim.keymap
 
-lspconfig.sourcekit.setup{}
+if vim.g.os == "Darwin" then
+  lspconfig.sourcekit.setup{}
+end
 
 -- enable keybinds for available lsp server
 local on_attach = function(client, bufnr)
