@@ -64,3 +64,22 @@ colourscheme.setup({
     base0F = '#d65d0e',  
 })
 
+-- Atom One Light
+colourscheme.setup({
+    base00 = '#fafafa',  -- Background
+    base01 = '#f0f0f1',  -- Lighter Background
+    base02 = '#e5e5e6',  -- Selection Background
+    base03 = '#a0a1a7',  -- Comments, Invisibles
+    base04 = '#696c77',  -- Dark Foreground
+    base05 = '#383a42',  -- Default Foreground
+    base06 = '#202227',  -- Darker Foreground
+    base07 = '#090a0b',  -- Default Background
+    base08 = '#e45649',  -- Red (Errors)
+    base09 = '#986801',  -- Orange (Warning)
+    base0A = '#c18401',  -- Yellow
+    base0B = '#50a14f',  -- Green
+    base0C = '#0184bc',  -- Cyan
+    base0D = '#4078f2',  -- Blue
+    base0E = '#a626a4',  -- Magenta
+    base0F = '#a62639',  -- Brown
+})
