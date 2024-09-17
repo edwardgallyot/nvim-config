@@ -24,12 +24,17 @@ keymap.set("n", "<leader>-", "<C-a>");
 -- Build
 -- Define your key mappings for different filetypes
 local function c_build_keys()
-  vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':!build<CR>', { noremap = true, silent = true })
-  vim.api.nvim_buf_set_keymap(0, 'n', '<leader>rb', ':!rebuild<CR>', { noremap = true, silent = true })
+  if vim.g.os == "Darwin" then
+    vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':!./build.sh<CR>', { noremap = true, silent = true })
+    vim.api.nvim_buf_set_keymap(0, 'n', '<leader>rb', ':!./rebuild.sh<CR>', { noremap = true, silent = true })
+  else
+    vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':!build<CR>', { noremap = true, silent = true })
+    vim.api.nvim_buf_set_keymap(0, 'n', '<leader>rb', ':!rebuild<CR>', { noremap = true, silent = true })
+  end
 end
 
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-  pattern = {"*.bat", "*.asm", "*.c", "*.h"},
+  pattern = {"*.bat", "*.asm", "*.c", "*.h", "*.swift", "*.sh"},
   callback = c_build_keys
 })
 
