@@ -68,7 +68,7 @@ keymap.set("n", "<leader>v", "<C-w>v");
 keymap.set("n", "<leader>h", "<C-w>s");
 
 -- Sidebar tree
-keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>");
+keymap.set("n", "<leader>t", ":Neotree toggle<CR>");
 
 -- Close split window
 keymap.set("n", "<leader>x", ":close<CR>")
