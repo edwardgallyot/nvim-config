@@ -83,3 +83,23 @@ colourscheme.setup({
     base0E = '#a626a4',  -- Magenta
     base0F = '#a62639',  -- Brown
 })
+
+-- Iceberg.vim
+colourscheme.setup({
+  base00 = '#161821',  -- Background
+  base01 = '#1e2132',  -- Lighter Background
+  base02 = '#2e303e',  -- Selection Background
+  base03 = '#6b7089',  -- Comments, Invisibles
+  base04 = '#818596',  -- Dark Foreground
+  base05 = '#c6c8d1',  -- Default Foreground
+  base06 = '#d2d4de',  -- Lighter Foreground
+  base07 = '#e8e9f3',  -- Default Background
+  base08 = '#e27878',  -- Red (Errors)
+  base09 = '#e2a478',  -- Orange (Warning)
+  base0A = '#e2c678',  -- Yellow
+  base0B = '#a3be8c',  -- Green
+  base0C = '#89b8c2',  -- Cyan
+  base0D = '#84a0c6',  -- Blue
+  base0E = '#a093c7',  -- Magenta
+  base0F = '#d27e99',  -- Brown
+})

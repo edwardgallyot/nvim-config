@@ -12,20 +12,21 @@ end
 mason.setup()
 
 mason_lspconfig.setup({
-    ensure_installed = {
-        "wgsl_analyzer",
-        "rust_analyzer",
-        "pylsp",
-        "html",
-        "cssls",
-        "clangd",
-        "lua_ls",
-        "cmake",
-        "jsonls",
-        "glsl_analyzer",
-        "bashls",
-        "asm_lsp"
-        -- "hls",
-        -- "nginx_language_server"
-    }
+  ensure_installed = {
+    "wgsl_analyzer",
+    "rust_analyzer",
+    "pylsp",
+    "html",
+    "cssls",
+    "clangd",
+    "lua_ls",
+    "cmake",
+    "jsonls",
+    "glsl_analyzer",
+    "bashls",
+    "asm_lsp",
+    "gopls"
+      -- "hls",
+      -- "nginx_language_server"
+  }
 })

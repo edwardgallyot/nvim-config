@@ -70,6 +70,11 @@ end
 -- used to enable autocompletion
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+lspconfig["gopls"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach
+})
+
 lspconfig["rust_analyzer"].setup({
     capabilities = capabilities,
     on_attach = on_attach
@@ -127,8 +132,8 @@ lspconfig["zls"].setup({
 })
 
 lspconfig["glsl_analyzer"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach
+  capabilities = capabilities,
+  on_attach = on_attach,
 })
 
 lspconfig["hls"].setup({
