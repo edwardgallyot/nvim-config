@@ -16,6 +16,8 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.g.inlay_hints_visible = true
 
+vim.g.zig_fmt_autosave = 0
+
 -- automatic sudo 
 -- vim.g.suda_smart_edit = 1
 

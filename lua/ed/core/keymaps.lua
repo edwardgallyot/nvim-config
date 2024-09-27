@@ -34,19 +34,9 @@ local function c_build_keys()
 end
 
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-  pattern = {"*.bat", "*.asm", "*.c", "*.h", "*.swift", "*.sh"},
+  pattern = {"*.bat", "*.asm", "*.c", "*.h", "*.swift", "*.sh", "*.zig", "*.cpp"},
   callback = c_build_keys
 })
-
-local function zig_build_keys()
-  vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':!zig build<CR>', { noremap = true, silent = true })
-end
-
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-  pattern = {"*.zig"},
-  callback = zig_build_keys
-})
-
 
 -- keymap.set('n', '<leader>rb', ":!rebuild\n")
 -- keymap.set('n', '<leader>b',  ":!build\n")
