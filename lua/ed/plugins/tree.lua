@@ -7,5 +7,7 @@ require("neo-tree").setup({
       hide_gitignored = false,
       hide_hidden = false,
     }
-  }
+
+  },
+  popup_border_style="NC"
 })

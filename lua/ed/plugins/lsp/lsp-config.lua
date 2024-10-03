@@ -71,13 +71,18 @@ end
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 lspconfig["gopls"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach
+  capabilities = capabilities,
+  on_attach = on_attach
 })
 
 lspconfig["rust_analyzer"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach
+  capabilities = capabilities,
+  on_attach = on_attach
+})
+
+lspconfig["ols"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach
 })
 
 lspconfig["wgsl_analyzer"].setup({
