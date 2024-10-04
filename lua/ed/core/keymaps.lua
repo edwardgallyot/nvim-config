@@ -34,7 +34,7 @@ local function c_build_keys()
 end
 
 local function rust_build_keys()
-  vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':!cargo build', { noremap = true, silent = true })
+  vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':!cargo build<CR>', { noremap = true, silent = true })
 end
 
 
