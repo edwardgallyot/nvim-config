@@ -33,12 +33,24 @@ local function c_build_keys()
   end
 end
 
+local function rust_build_keys()
+  vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':!cargo build', { noremap = true, silent = true })
+end
+
+
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   pattern = {
     "*.bat", "*.asm", "*.c", "*.h", "*.swift", "*.sh", "*.cpp",
-    "*.odin", "*.zig"
+    "*.odin", "*.zig", "*.go"
   },
   callback = c_build_keys
+})
+
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = {
+    "Cargo.toml", "*.rs"
+  },
+  callback = rust_build_keys
 })
 
 -- keymap.set('n', '<leader>rb', ":!rebuild\n")

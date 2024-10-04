@@ -26,6 +26,7 @@ mason_lspconfig.setup({
     "bashls",
     "asm_lsp",
     "gopls"
+      -- "ols",
       -- "hls",
       -- "nginx_language_server"
   }
