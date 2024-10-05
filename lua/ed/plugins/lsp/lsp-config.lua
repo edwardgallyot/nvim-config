@@ -85,6 +85,11 @@ lspconfig["ols"].setup({
   on_attach = on_attach
 })
 
+lspconfig["crystalline"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach
+})
+
 lspconfig["wgsl_analyzer"].setup({
     capabilities = capabilities,
     on_attach = on_attach

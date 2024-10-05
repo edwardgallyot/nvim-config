@@ -61,6 +61,13 @@ api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   command = "setlocal shiftwidth=8 tabstop=8 expandtab"
 })
 
+api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = {"*.cr"},
+  callback = function ()
+    vim.bo.filetype = "ruby"
+  end
+})
+
 -- for 2 space indents on .lua files. meh...
 api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   pattern = {"*.lua"},
