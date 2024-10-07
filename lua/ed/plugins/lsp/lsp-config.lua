@@ -75,6 +75,11 @@ lspconfig["gopls"].setup({
   on_attach = on_attach
 })
 
+lspconfig["als"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach
+})
+
 lspconfig["rust_analyzer"].setup({
   capabilities = capabilities,
   on_attach = on_attach

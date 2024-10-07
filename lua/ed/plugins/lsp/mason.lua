@@ -25,7 +25,8 @@ mason_lspconfig.setup({
     "glsl_analyzer",
     "bashls",
     "asm_lsp",
-    "gopls"
+    "gopls",
+    "als"
       -- "ols",
       -- "hls",
       -- "nginx_language_server"
