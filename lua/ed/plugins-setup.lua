@@ -37,6 +37,7 @@ require("lazy").setup({
 
     -- commenting 
     "numToStr/Comment.nvim",
+    "TamaMcGlinn/nvim-lspconfig-ada",
 
     --icons
     "kyazdani42/nvim-web-devicons",
@@ -66,7 +67,8 @@ require("lazy").setup({
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     -- configure lsp servers
-    "neovim/nvim-lspconfig",
+    -- "neovim/nvim-lspconfig",
+    "TamaMcGlinn/nvim-lspconfig",
     "hrsh7th/cmp-nvim-lsp",
 
     -- nvim-treesitter

@@ -25,25 +25,36 @@ keymap.set("n", "<leader>-", "<C-a>");
 -- Define your key mappings for different filetypes
 local function c_build_keys()
   if vim.g.os == "Darwin" or vim.g.os == "Linux" then
-    vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':split | enew | r!./build.sh<CR>', { noremap = true, silent = true })
-    vim.api.nvim_buf_set_keymap(0, 'n', '<leader>rb', ':split | enew | r!./rebuild.sh<CR>', { noremap = true, silent = true })
+    vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':split | enew | setlocal bufhidden=wipe buftype=nofile nobuflisted noswapfile | r!./build.sh<CR>', { noremap = true, silent = true })
+    vim.api.nvim_buf_set_keymap(0, 'n', '<leader>rb', ':split | enew | setlocal bufhidden=wipe buftype=nofile nobuflisted noswapfile | r!./rebuild.sh<CR>', { noremap = true, silent = true })
   else
-    vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':split | enew | r!build<CR>', { noremap = true, silent = true })
-    vim.api.nvim_buf_set_keymap(0, 'n', '<leader>rb', ':split | enew | r!rebuild<CR>', { noremap = true, silent = true })
+    vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':split | enew | setlocal bufhidden=wipe buftype=nofile nobuflisted noswapfile |  r!build<CR>', { noremap = true, silent = true })
+    vim.api.nvim_buf_set_keymap(0, 'n', '<leader>rb', ':split | enew | setlocal bufhidden=wipe buftype=nofile nobuflisted noswapfile | r!rebuild<CR>', { noremap = true, silent = true })
   end
 end
 
 local function rust_build_keys()
-  vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':r!cargo build<CR>', { noremap = true, silent = true })
+  vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':split | enew | setlocal bufhidden=wipe buftype=nofile nobuflisted noswapfile | r!cargo build<CR>', { noremap = true, silent = true })
 end
 
+local function ada_build_keys()
+  vim.api.nvim_buf_set_keymap(0, 'n', '<leader>ab', ':split | enew | setlocal bufhidden=wipe buftype=nofile nobuflisted noswapfile | r!alr build<CR>', { noremap = true, silent = true })
+  vim.api.nvim_buf_set_keymap(0, 'n', '<leader>b', ':split | enew | setlocal bufhidden=wipe buftype=nofile nobuflisted noswapfile | r!./build.sh<CR>', { noremap = true, silent = true })
+end
 
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   pattern = {
     "*.bat", "*.asm", "*.c", "*.h", "*.swift", "*.sh", "*.cpp",
-    "*.odin", "*.zig", "*.go", "*.adb"
+    "*.odin", "*.zig", "*.go", "*.adb", "*.ads", "*.gpr"
   },
   callback = c_build_keys
+})
+
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = {
+    "*.adb", "*.ads", "*.gpr", "alire.toml"
+  },
+  callback = ada_build_keys
 })
 
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {

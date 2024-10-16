@@ -74,6 +74,12 @@ api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   command = "setlocal shiftwidth=2 tabstop=2 expandtab"
 })
 
+-- for 3 space indents on ada files. meh...
+api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = {"*.ads", "*.adb", "*.gpr"},
+  command = "setlocal shiftwidth=3 tabstop=3 expandtab"
+})
+
 -- Define a highlight group with your preferred style
 vim.api.nvim_set_hl(0, 'ImportantWord', { fg = 'Pink', bold = true, underline = true})
 
