@@ -34,10 +34,11 @@ require("lazy").setup({
           -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	    }
     },
+    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
     -- commenting 
     "numToStr/Comment.nvim",
-    "TamaMcGlinn/nvim-lspconfig-ada",
+    {"TamaMcGlinn/nvim-lspconfig-ada"},
 
     --icons
     "kyazdani42/nvim-web-devicons",
@@ -67,8 +68,7 @@ require("lazy").setup({
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     -- configure lsp servers
-    -- "neovim/nvim-lspconfig",
-    "TamaMcGlinn/nvim-lspconfig",
+    "neovim/nvim-lspconfig",
     "hrsh7th/cmp-nvim-lsp",
 
     -- nvim-treesitter

@@ -103,3 +103,9 @@ colourscheme.setup({
   base0E = '#a093c7',  -- Magenta
   base0F = '#d27e99',  -- Brown
 })
+
+ require("moonfly").custom_colors({
+    bg = "#000000",
+  })
+vim.cmd [[colorscheme moonfly]]
+
